@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介绍 · 世界杯 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: #f7f5f0;
+            color: #1f2937;
+            line-height: 1.7;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(135deg, #0b1a2c 0%, #1e3a5f 100%);
+            color: #e2e8f0;
+            padding: 4rem 2rem 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 350;
+            letter-spacing: 0.04em;
+            margin-bottom: 1.2rem;
+            color: #ffffff;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1rem;
+            color: #b0c4d9;
+            font-weight: 300;
+        }
+
+        .hero .sub {
+            margin-top: 1.2rem;
+            font-size: 0.85rem;
+            color: #7f9bb3;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 1.2rem;
+            display: inline-block;
+        }
+
+        /* 正文容器 */
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.8rem 1.8rem 3.5rem;
+        }
+
+        .post-meta {
+            font-size: 0.8rem;
+            color: #8b8f94;
+            letter-spacing: 0.03em;
+            margin-bottom: 1.8rem;
+            border-bottom: 1px solid #e4dfd6;
+            padding-bottom: 0.75rem;
+        }
+
+        .post-meta span {
+            margin-right: 1.2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 450;
+            margin: 2.2rem 0 0.8rem;
+            color: #1e293b;
+            letter-spacing: 0.01em;
+        }
+
+        p {
+            margin-bottom: 1.3rem;
+            font-size: 1rem;
+            color: #2d3748;
+        }
+
+        a {
+            color: #b45309;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #92400e;
+            border-bottom-color: #b45309;
+        }
+
+        /* 引用/提示框 */
+        .inset-quote {
+            background: #f0ece4;
+            border-left: 4px solid #b45309;
+            padding: 1.2rem 1.5rem;
+            margin: 1.8rem 0;
+            border-radius: 0 8px 8px 0;
+            font-style: normal;
+            color: #3f3d3a;
+        }
+
+        .inset-quote p {
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+
+        .inset-quote .source {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #7c7a74;
+        }
+
+        .highlight-box {
+            background-color: #ffffff;
+            border: 1px solid #e2dcd2;
+            border-radius: 12px;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .highlight-box h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: #1e293b;
+        }
+
+        .highlight-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlight-box li {
+            padding: 0.25rem 0;
+            position: relative;
+            padding-left: 1.4rem;
+            color: #374151;
+        }
+
+        .highlight-box li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #b45309;
+        }
+
+        .simple-faq {
+            margin: 2rem 0 1.2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e6dfd6;
+            padding: 0.8rem 0;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        .closing-note {
+            margin-top: 2.8rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e0dad0;
+            font-size: 0.9rem;
+            color: #5f5c57;
+            text-align: center;
+        }
+
+        .closing-note a {
+            font-weight: 400;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .hero {
+                padding: 2.8rem 1.2rem 2.5rem;
+            }
+            .container {
+                padding: 2rem 1.2rem 2.8rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .highlight-box {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 -->
+    <header class="hero">
+        <h1>关于 cns-united2026.com 的说明</h1>
+        <p>一个专注于 2026 年世界杯主题的信息整合站点，尝试以相对克制的视角提供背景与参考。</p>
+        <div class="sub">写于 2025 年春 · 介绍与可信说明</div>
+    </header>
+
+    <!-- 正文区 -->
+    <main class="container">
+
+        <div class="post-meta">
+            <span>📄 站点介绍</span>
+            <span>· 简洁博客式</span>
+        </div>
+
+        <p>
+            如果你对 2026 年美加墨世界杯抱有好奇，或者想找一个相对安静的起点来了解赛事筹备、赛程轮廓与球队动态，那么 <strong>cns-united2026.com</strong> 或许能提供一些参考。它不像门户那样铺满弹窗与推荐流，而是更像一本轻量的笔记——把分散的信息重新编织成可读的段落。
+        </p>
+
+        <p>
+            这个站点的内容方向围绕「世界杯」展开，但并非赛事官方渠道。它的价值在于整理与筛选：从申办阶段到预选赛格局，从场馆进度到足球文化碎片，尽量用平实的语言记录下来。我注意到它最近补充了关于北美三个主办国（美国、加拿大、墨西哥）的交通与城市背景，这部分对计划长途观赛的人来说比较实用。
+        </p>
+
+        <!-- 引用提示：强调可信说明 -->
+        <div class="inset-quote">
+            <p>“站点运营者在一篇脚注里写得很坦白：这里不生产独家新闻，也不做竞猜与博彩导向，只是一个普通爱好者对世界杯的信息梳理与个人笔记。数据来源以 FIFA 官方新闻、主办城市公告和主流体育媒体为主。”</p>
+            <div class="source">—— 摘自站点「关于」页面的声明</div>
+        </div>
+
+        <h2>为什么值得留意这个站点</h2>
+        <p>
+            在信息过载的时代，一个不追热点、不贴横幅广告、不诱导注册的页面反而显得特别。<strong>cns-united2026.com</strong> 的阅读体验接近于一本独立杂志的副刊：标题朴实，段落克制，偶尔插入地图或简表。它不会每小时刷新滚动条，但如果你想系统了解 <a href="https://cns-united2026.com">世界杯</a> 的扩军逻辑、赛区分工或票务阶段，那里有按时间线整理的档案。
+        </p>
+
+        <p>
+            另外，站点对「可信度」的处理也比较清醒：每个引用外部数据的段落都标注了来源链接（FIFA 官方、主办城市政府网站、媒体通稿），并且在页面底部设有勘误邮箱。虽然做不到百分之百无错，但至少为读者提供了交叉验证的路径。
+        </p>
+
+        <!-- 特点卡片 -->
+        <div class="highlight-box">
+            <h3>几个值得翻看的栏目</h3>
+            <ul>
+                <li>赛程与场馆手册 —— 48 支球队、104 场比赛、16 个主办城市的初步安排与变化记录</li>
+                <li>参赛队巡礼 —— 从预选赛突围到各大洲名额分配，附带简要战术风格笔记</li>
+                <li>旅行与观赛日志 —— 针对北美三国的签证、城际交通、球场周边与住宿参考</li>
+                <li>世界杯备忘录 —— 历届决赛数据、经典比赛回顾、规则演变与冷知识</li>
+            </ul>
+        </div>
+
+        <h2>一些使用前的提示</h2>
+        <p>
+            需要说明的是，cns-united2026.com 并非任何国际足联或主办国的授权网站。它由个人维护，更新频率受限于业余时间，可能在大赛临近时更活跃，而在休赛期趋于静默。如果你在寻找官方票务购买入口或权威赛程变更通知，请直接访问 FIFA 官网或各主办城市旅游局。
+        </p>
+
+        <p>
+            站内偶尔会出现链接失效或数据滞后的情况——运营者在去年十二月的一篇更新日志中提到，由于部分主办城市修改了场馆容量数据，他花了一个周末重新核对并替换了表格。这种修正态度让人对内容质量多一份信任。
+        </p>
+
+        <!-- FAQ 摘要形式 -->
+        <div class="simple-faq">
+            <div class="faq-item">
+                <strong>问：这个网站适合什么人看？</strong>
+                <p>对 2026 年世界杯有中等以上好奇心的球迷、计划去北美观赛的旅行者、以及想快速了解扩军后赛事结构的普通读者。</p>
+            </div>
+            <div class="faq-item">
+                <strong>问：信息可靠吗？</strong>
+                <p>大部分数据来自公开官方渠道，站点会标注来源。但建议对票务、赛程等关键信息做二次确认。</p>
+            </div>
+            <div class="faq-item">
+                <strong>问：有手机版或 RSS 吗？</strong>
+                <p>页面适配移动端，但没有单独 App。站内提供 Atom 订阅，适合用阅读器跟踪更新。</p>
+            </div>
+        </div>
+
+        <!-- 自然嵌入链接的句子 -->
+        <p>
+            如果你对上述内容感兴趣，不妨在下次打开浏览器时记下这个地址：<a href="https://cns-united2026.com">世界杯</a>。它不承诺颠覆你的认知，但或许能在嘈杂的信息流里提供一个安静的角落。
+        </p>
+
+        <div class="closing-note">
+            <p>本文所提及的站点与内容均基于公开可查的信息整理。最后更新：2025年3月。</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
